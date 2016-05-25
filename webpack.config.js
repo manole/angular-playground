@@ -14,11 +14,13 @@ module.exports = {
         filename: './bundle.js'
     },
     resolve: {
-        extensions: ['.js', '.html']
+        extensions: ['.js', '.html', '']
     },
     module: {
         loaders: [
-            {loader: 'html-loader', test: /\.tpl\.html$/, exclude: /\.js/}
+            {loader: 'html-loader', test: /\.tpl\.html$/, exclude: /\.js/},
+            {loader: 'style!css', test: /\.css$/, exclude: /\.js/}
+
         ]
     },
     watch: true

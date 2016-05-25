@@ -1,4 +1,23 @@
-<md-content layout="row">
-    <p>Hello</p>
-    <p>{{ $ctrl.someProperty }}</p>
+<md-content class="md-padding" layout-xs="column" layout="row">
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline"> Card with action</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="start center">
+            <md-card-icon-actions>
+                <md-button class="md-icon-button" aria-label="Favorite">
+                </md-button>
+                <md-button class="md-icon-button" aria-label="Share">
+                </md-button>
+            </md-card-icon-actions>
+            <md-button>Action 1</md-button>
+        </md-card-actions>
+        <md-card-content>
+            <p>
+                Some content
+            </p>
+        </md-card-content>
+    </md-card>
 </md-content>
