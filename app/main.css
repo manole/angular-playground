@@ -1,0 +1,14 @@
+md-card.widget-card {
+    width: 400px;
+    height: 200px;
+}
+
+
+/*.widget-content {*/
+    /*height: 50%;*/
+/*}*/
+
+.widget-degrees {
+    padding-top: 16px;
+    font-size: 60px;
+}
