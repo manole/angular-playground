@@ -3,9 +3,20 @@
     height: 160px;
 }
 
-.widget-condition {
-    height: 50px;
-    font-size: 40px;
+.widget-content {
+    margin-left: 8px;
+}
+
+.widget-content.temperature {
+    font-size: 50px;
+    vertical-align: middle;
+}
+
+.widget-content.image {
+    height: 38px;
+    width: 38px;
+    font-size: 10px;
+    text-align: center;
 }
 
 .widget-forecast {
@@ -14,7 +25,18 @@
     text-align: center;
 }
 
-.widget-forecast ~ div > div{
+.widget-forecast ~ div > div {
     border-left-style: dashed;
     border-width: 1px;
+}
+
+weather-gadget {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 160px;
+    width: 310px;
 }

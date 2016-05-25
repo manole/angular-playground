@@ -1,23 +1,22 @@
 <md-content class="md-padding" layout-xs="column" layout="row">
     <md-card class="widget-card">
-
         <md-card-header>
             <md-card-header-text>
                 <span class="md-title">{{$ctrl.location.city}}, {{$ctrl.location.region}}</span>
             </md-card-header-text>
         </md-card-header>
-
-        <md-card-content class="widget-content" layout="row">
-            <div class="widget-condition">{{$ctrl.condition.temp}}&deg;</div>
-            <img class="widget-condition" src="{{$ctrl.image}}"/>
-        </md-card-content>
-
+        <div layout="row" class="widget-content ">
+            <div class="widget-content temperature">{{$ctrl.condition.temp}}&deg;</div>
+            <div class="widget-content image">
+                <img src="{{$ctrl.image}}"/>
+                <div class="widget-content image-text">{{$ctrl.condition.text}}</div>
+            </div>
+        </div>
         <md-card-footer layout="row">
             <div ng-repeat="n in $ctrl.forecast | limitTo:5" class="widget-forecast">
-                    <div>{{n.day}}</div>
-                    <div>{{n.high}}&deg;/{{n.low}}&deg;</div>
+                <div>{{n.day}}</div>
+                <div>{{n.high}}&deg;/{{n.low}}&deg;</div>
             </div>
         </md-card-footer>
-
     </md-card>
 </md-content>
