@@ -7,7 +7,7 @@ let webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: './app/index',
+        app: './app/index'
     },
     output: {
         path: __dirname,
@@ -18,7 +18,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            {loader: 'raw', test: /\.tpl\.html$/}
+            {loader: 'html-loader', test: /\.tpl\.html$/, exclude: /\.js/}
         ]
     },
     watch: true
