@@ -1,5 +1,14 @@
-let func = () => {
-    console.log("hello cvent");
-};
+'use strict';
 
-func();
+let angular = require('angular');
+let md = require('angular-material');
+// let gadgetTemplate = require('./gadget.tpl.html');
+
+module.exports = angular.module('cvent.weather.gadget', [md])
+    .controller('weatherController', function() {
+        this.someProperty = 'cvent';
+    })
+    .component('weatherGadget', {
+        template: '<p> Hello World </p>',
+        controller: 'weatherController'
+    }).name;

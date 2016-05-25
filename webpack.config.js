@@ -7,14 +7,14 @@ let webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: './app/index'
+        app: './app/index',
     },
     output: {
         path: __dirname,
         filename: './bundle.js'
     },
     resolve: {
-        extensions: ['.js']
+        extensions: ['.js', '.html']
     },
     module: {
         loaders: [

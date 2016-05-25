@@ -8,9 +8,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.14.1"
+    "webpack": "1.13.0",
+    "webpack-dev-server": "1.14.1"
   },
   "author": "manole",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "angular": "1.5.5",
+    "angular-material": "1.0.5",
+    "angular-animate": "1.5.0",
+    "angular-aria": "1.5.0"
+  }
 }
