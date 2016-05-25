@@ -2,9 +2,14 @@
   "name": "weather-challenge",
   "version": "0.0.1",
   "description": "Weather widget",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
+    "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --content-base app/ --port 1300",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
   },
   "author": "manole",
   "license": "ISC"
