@@ -24,16 +24,20 @@ module.exports = angular.module('cvent.weather.gadget', [md])
         }
     })
     .controller('weatherController', function (weatherService) {
+        // controller properties for display info
         this.condition = {temp: '--'};
         this.location = {};
         this.forecast = {};
         this.image = '';
+        // show busy waiting while retrieving the data
+        this.busy = true;
 
         weatherService.getWeatherData().then((data) => {
             this.condition = _.get(data, 'data.query.results.channel.item.condition');
             this.location = _.get(data, 'data.query.results.channel.location');
             this.forecast = _.get(data, 'data.query.results.channel.item.forecast');
             this.image = weatherService.getImage(this.condition.code);
+            this.busy = false;
         });
     })
     .component('weatherGadget', {
